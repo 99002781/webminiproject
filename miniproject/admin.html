@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  
+    <script>
+  
+        function submit(){
+            var name=document.forms["myform"]["Name"]; 
+            
+            var password =   document.forms["myform"]["Pwd"];
+             if (name.value != "abc") { 
+                    window.alert("Please enter your name."); 
+                    name.focus(); 
+                    return false; 
+                } 
+  
+             if (password.value != "123") { 
+                    window.alert("Please enter your address."); 
+                    password.focus(); 
+                    return false; 
+                } 
+                return true;
+        }
+    </script>
+</head>
+<body>
+<form name=myform action="CRED_admin.html" onsubmit="return submit()" method="POST">
+
+   
+    <p>Name: <input type="text" 
+        size="65" name="Name" /></p> 
+        <p>Password: <input type="text" 
+            size="65" name="Pwd" /></p> 
+            <input type="submit" 
+            value="send" name="Submit" /> 
+</form>
+</body>
+</html>
